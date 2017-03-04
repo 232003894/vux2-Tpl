@@ -28,7 +28,7 @@ pageArr = require('./base/page-entries')(basename)
 pageArr.forEach((page) => {
   var _page = page.replace('\/' + basename, '').replace(/\//g, '_')
   var conf = {
-    filename: 'html/' + '/' + _page + '.html',
+    filename: 'html' + '/' + _page + '.html',
     template: path.resolve(__dirname, '../src/pages' + `/${page}`), // 模板路径
     inject: true, // js插入位置
     minify: {
