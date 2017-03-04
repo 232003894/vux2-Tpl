@@ -107,8 +107,6 @@ FastClick.attach(document.body)
   }, {
     name: 'inline-manifest'
   }, {
-    name: 'duplicate-style'
-  }, {
     name: 'less-theme',
     path: 'src/assets/theme.less'
   }]
