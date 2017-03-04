@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div id="app" style="height:100%;">
+    <img src="../../assets/img/logo.png">
     <divider>simple card with header and content</divider>
     <card :header="{title:'我的钱包'}">
       <div slot="content" class="card-demo-flex card-demo-content01">
@@ -53,6 +54,7 @@
   } from 'vux'
 
   export default {
+    name: 'app',
     components: {
       Icon,
       Card,
