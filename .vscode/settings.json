@@ -1,0 +1,32 @@
+// 将设置放入此文件中以覆盖默认设置
+{
+  // 以新行结束。
+  "html.format.endWithNewline": false,
+  // 启用/禁用默认 JSON 格式化程序(需要重启)
+  "json.format.enable": false,
+  // 保存时设置文件的格式。格式化程序必须可用，不能自动保存文件，并且不能关闭编辑器。
+  "editor.formatOnSave": false,
+  // beautify扩展-设置
+  "beautify.language": {
+    "js": {
+      "type": [
+        "javascript"
+      ],
+      "filename": [
+        ".jshintrc",
+        ".jsbeautify"
+      ]
+    },
+    "css": [
+      "css",
+      "scss",
+      "less"
+    ],
+    "html": [
+      "htm",
+      "html",
+      "vue"
+    ]
+  },
+"vsicons.presets.angular": false
+}
