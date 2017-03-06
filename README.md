@@ -1,8 +1,6 @@
 # vue-webpack-boilerplate
 
-> A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction.
-
-> This template is Vue 2.0 compatible. For Vue 1.x use this command: `vue init webpack#1.0 my-project`
+> A full-featured Webpack setup with hot-reload, lint-on-save & css extraction.
 
 ## Documentation
 
@@ -37,14 +35,7 @@ $ npm run dev
   - All static assets compiled with version hashes for efficient long-term caching.
   - Use `npm run build --report`to build with bundle size analytics.
 
-- `npm run build+`: Production ready build.
+- `npm run build+`: Production ready build with no-compress.
   - All static assets compiled with version hashes for efficient long-term caching.
   - Use `npm run build+ --report`to build with bundle size analytics.
 
-### Fork It And Make Your Own
-
-You can fork this repo to create your own boilerplate, and use it with `vue-cli`:
-
-``` bash
-vue init username/repo my-project
-```
