@@ -39,7 +39,7 @@
         }, {
           style: 'primary',
           text: '跳转到首页',
-          link: '/html/index.html'
+          link: 'index.html'
         }],
         buttons2: [{
           style: 'primary',

@@ -25,7 +25,7 @@
 
     <br>
     <divider>with footer</divider>
-    <card :header="{title:'商品详情'}" :footer="{title:'查看更多',link:'/html/demo_index.html'}">
+    <card :header="{title:'商品详情'}" :footer="{title:'查看更多',link:'demo_index.html'}">
       <p slot="content" class="card-padding">
         custom content
         <Icon type="wifi"></Icon>
