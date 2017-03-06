@@ -34,19 +34,12 @@ $ npm run dev
   - JavaScript minified with [UglifyJS](https://github.com/mishoo/UglifyJS2).
   - HTML minified with [html-minifier](https://github.com/kangax/html-minifier).
   - CSS across all components extracted into a single file and minified with [cssnano](https://github.com/ben-eb/cssnano).
-  - All static assets compiled with version hashes for efficient long-term caching, and a production `index.html` is auto-generated with proper URLs to these generated assets.
+  - All static assets compiled with version hashes for efficient long-term caching.
   - Use `npm run build --report`to build with bundle size analytics.
 
-- `npm run unit`: Unit tests run in PhantomJS with [Karma](http://karma-runner.github.io/0.13/index.html) + [Mocha](http://mochajs.org/) + [karma-webpack](https://github.com/webpack/karma-webpack).
-  - Supports ES2015+ in test files.
-  - Supports all webpack loaders.
-  - Easy mock injection.
-
-- `npm run e2e`: End-to-end tests with [Nightwatch](http://nightwatchjs.org/).
-  - Run tests in multiple browsers in parallel.
-  - Works with one command out of the box:
-    - Selenium and chromedriver dependencies automatically handled.
-    - Automatically spawns the Selenium server.
+- `npm run build+`: Production ready build.
+  - All static assets compiled with version hashes for efficient long-term caching.
+  - Use `npm run build+ --report`to build with bundle size analytics.
 
 ### Fork It And Make Your Own
 
