@@ -7,6 +7,7 @@ if (!process.env.NODE_ENV) {
 
 var opn = require('opn')
 var path = require('path')
+var chalk = require('chalk')
 var express = require('express')
 var webpack = require('webpack')
 var proxyMiddleware = require('http-proxy-middleware')
@@ -71,7 +72,7 @@ app.use(staticPath, express.static('./static'))
 var uri = 'http://localhost:' + port + (config.dev.index || '')
 
 devMiddleware.waitUntilValid(function () {
-  console.log('> Listening at ' + uri + '\n')
+  console.log(chalk.cyan('[监听中]') + uri + '\n')
 })
 
 module.exports = app.listen(port, function (err) {
@@ -83,23 +84,14 @@ module.exports = app.listen(port, function (err) {
   // when env is testing, don't need open it
   if (autoOpenBrowser && process.env.NODE_ENV !== 'testing') {
     // chrome 开启跨域请求模式打开
-    var copyPath = ''
-    var chromename = ''
-    var userDataPath = ''
-    if (process.platform == 'win32') { //windows
-      chromename = 'chrome'
-      userDataPath = 'D:\\tmp\\CMyChromeDevUserData'
-      // copyPath = 'D:\\chenw\\Documents\\HBuilderProject\\vuetest'
-    } else if (process.platform == 'darwin') { //windows
-      chromename = 'google chrome'
-      userDataPath = '/Users/kaifa/Documents/tmp'
-    } else { //'freebsd', 'linux', 'sunos'
-      chromename = 'google-chrome'
-      userDataPath = ''
+    var opts = {}
+    if (config.dev.chrome && config.dev.chrome[process.platform]) {
+      var chrome = config.dev.chrome[process.platform]
+      opts = {
+        wait: false,
+        app: [chrome.name, '--remote-debugging-port=9222', '--disable-web-security', '--user-data-dir=' + chrome.userDataPath]
+      }
     }
-    opn(uri, {
-      wait: false,
-      app: [chromename, '--remote-debugging-port=9222', '--disable-web-security', '--user-data-dir=' + userDataPath]
-    })
+    opn(uri, opts)
   }
 })
